@@ -18,11 +18,11 @@ class MiniTestAdapter @Inject constructor() :
         fun bind(item: MiniTestResponseItem) {
             binding.apply {
                 Glide.with(itemView.context)
-                    .load(item.image)
+                    .load(item.embedded?.show?.image?.original)
                     .into(imgView)
                 tvName.text = item.name
-                tvGenre.text = item.links?.show?.genres?.joinToString(", ")
-                tvRating.text = item.rating?.average.toString()
+                tvGenre.text = item.embedded?.show?.genres?.joinToString(", ")
+                tvRating.text = item.rating?.average?.toString() ?: "0"
             }
         }
     }
