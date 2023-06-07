@@ -3,8 +3,6 @@ package com.app.minitest
 import com.google.gson.annotations.SerializedName
 
 data class MiniTestResponse(
-
-	@field:SerializedName("MiniTestResponse")
 	val miniTestResponse: List<MiniTestResponseItem?>? = null
 )
 

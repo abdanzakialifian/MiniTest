@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
                             is UiState.Success -> {
                                 binding.progressBar.visibility = View.GONE
-                                adapter.submitList(uiState.data.miniTestResponse)
+                                adapter.submitList(uiState.data)
                             }
                         }
                     }
